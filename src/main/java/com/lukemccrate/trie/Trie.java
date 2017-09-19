@@ -64,6 +64,7 @@ public class Trie {
 
         protected void addBranch(TrieNode val) {
             branches.add(val);
+            branches.sort((o1, o2) -> o1.val.compareTo(o2.val));
         }
 
         protected void makeWord() {

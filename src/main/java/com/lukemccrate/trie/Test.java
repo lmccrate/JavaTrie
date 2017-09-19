@@ -9,7 +9,7 @@ public class Test {
         Trie foo = new Trie();
         foo.add("temporary");
         foo.add("temp");
-        //foo.add("ant");
+        foo.add("ant");
         foo.print();
     }
 }
