@@ -2,6 +2,7 @@ package com.lukemccrate.trie;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by lmccrate on 9/18/2017.
@@ -11,6 +12,12 @@ public class Trie {
 
     public Trie() {
         head = new TrieNode("", false);
+    }
+
+    public void addAll(List<String> vals) {
+        for(String val : vals) {
+            add(val);
+        }
     }
 
     public void add(String val) {
@@ -34,6 +41,11 @@ public class Trie {
         }
     }
 
+    public boolean search(String prefix) {
+
+        return true;
+    }
+
     public void print() {
         head.print("", true);
     }
@@ -47,10 +59,6 @@ public class Trie {
             this.val = val;
             this.word = word;
             branches = new ArrayList<>();
-        }
-
-        protected List<TrieNode> getBranches(){
-            return branches;
         }
 
         protected TrieNode get(String val) {
